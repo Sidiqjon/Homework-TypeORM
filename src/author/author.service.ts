@@ -13,6 +13,8 @@ export class AuthorService {
   ) {}
 
   async create(createAuthorDto: CreateAuthorDto): Promise<Author> {
+    console.log(createAuthorDto);
+    
     const author = this.authorsRepository.create(createAuthorDto);
     return this.authorsRepository.save(author);
   }
