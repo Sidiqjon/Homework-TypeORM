@@ -12,7 +12,7 @@ export class Book {
   @Column()
   year: number;
 
-  @Column()
+  @Column('decimal', { precision: 10, scale: 2 })
   price: number;
 
   @ManyToOne(() => Author, (author) => author.books)
